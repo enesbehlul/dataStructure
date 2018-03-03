@@ -44,6 +44,25 @@ public class LinkedList<T> {
         }
     }
     
+    public void remove(T rData){
+        Node<T> temp = head;
+        while (temp.next != null && !temp.next.data.equals(rData)) {
+            temp = temp.next;
+        }
+        if (head.data.equals(rData)) {
+            head = head.next;
+        }
+        else if (temp.next != null) {
+            temp.next = temp.next.next;
+        }
+        else if (temp.next.next == null && temp != null) {
+            temp.next = null;
+        }
+        else {
+            System.out.println("temp null");
+        }
+    }
+    
     public void print() {
         Node<T> temp = head;
         while (temp != null) {

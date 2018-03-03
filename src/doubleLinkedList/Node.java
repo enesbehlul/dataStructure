@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package linkedListTekrar;
+package doubleLinkedList;
 
 /**
  *
@@ -12,9 +12,11 @@ package linkedListTekrar;
 public class Node<T> {
     T data;
     Node<T> next;
-    
-    public Node(T data){
+    Node<T> prev;
+
+    public Node(T data) {
         next = null;
+        prev = null;
         this.data = data;
     }
 }
